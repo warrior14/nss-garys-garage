@@ -1,3 +1,5 @@
+using System;
+
 namespace Garage
 {
     public class Zero : Vehicle // Electric motorcycle
