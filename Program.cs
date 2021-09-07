@@ -36,29 +36,30 @@ namespace Garage
 
             /***********************************************/
 
-            // Ram ram = new Ram ();
-            // Cessna cessna150 = new Cessna ();
+            Ram ram = new Ram () { CurrentTankPercentage = 23, Name = "Ram"};
+            Cessna cessna150 = new Cessna () { CurrentTankPercentage = 14, Name = "Cessna"};
 
-            // List<IGasVehicle> gasVehicles = new List<IGasVehicle>() {
-            //     ram, cessna150
-            // };
+            List<IGasVehicle> gasVehicles = new List<IGasVehicle>() {
+                ram, cessna150
+            };
 
-            // Console.WriteLine("Gas Vehicles");
-            // foreach(IGasVehicle gv in gasVehicles)
-            // {
-            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
-            // }
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Gas Vehicles");
+            foreach(IGasVehicle gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
 
-            // foreach(IGasVehicle gv in gasVehicles)
-            // {
-            //     // This should completely refuel the gas tank
-            //     gv.RefuelTank();
-            // }
+            foreach(IGasVehicle gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+            }
 
-            // foreach(IGasVehicle gv in gasVehicles)
-            // {
-            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
-            // }
+            foreach(IGasVehicle gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
 
 
 
