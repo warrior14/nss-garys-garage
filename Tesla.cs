@@ -2,17 +2,22 @@ using System;
 
 namespace Garage
 {
-    public class Tesla : Vehicle // you need a colon between the subclass name and the base/parent class name when inheriting 
+    public class Tesla : Vehicle, IElectricVehicle // you need a colon between the subclass name and the base/parent class name when inheriting 
     // now with any instance of Tesla will have the same properties and methods from the base/parent class
     {
-        public double BatteryKWh { get; set; }
+        public double BatteryKWh { get; set; } = 100.00;
+         public double CurrentChargePercentage { get; set; }
 
         public void ChargeBattery()
         {
             // method definition omitted
-            Console.WriteLine($"Your car is now charged up to {BatteryKWh} KWh");
+            Console.WriteLine($"Your {Name} is currently {CurrentChargePercentage}% but now is charged up to {BatteryKWh}% KWh.");
+            CurrentChargePercentage = BatteryKWh;
             Console.WriteLine();
         }
+
+    
+        
 
         public override void Drive()
         {
@@ -28,6 +33,9 @@ namespace Garage
         {
             Console.WriteLine($"The {MainColor} Tesla abrupty stops.");
         }
+
+
+
     }
 }
 
